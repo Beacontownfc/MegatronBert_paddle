@@ -1,0 +1,301 @@
+[INFO]: current net device: eth0, ip: 172.28.0.83
+[INFO]: paddle job envs:
+POD_IP=job-23126d27c364078788b26e9d4645a3be-trainer-0.job-23126d27c364078788b26e9d4645a3be
+PADDLE_PORT=12345
+PADDLE_TRAINER_ID=0
+PADDLE_TRAINERS_NUM=1
+PADDLE_USE_CUDA=1
+NCCL_SOCKET_IFNAME=eth0
+PADDLE_IS_LOCAL=1
+OUTPUT_PATH=/root/paddlejob/workspace/output
+LOCAL_LOG_PATH=/root/paddlejob/workspace/log
+LOCAL_MOUNT_PATH=/mnt/code_20220207170047,/mnt/datasets_20220207170047
+JOB_ID=job-23126d27c364078788b26e9d4645a3be
+TRAINING_ROLE=TRAINER
+[INFO]: user command: bash run_mnli.sh
+[INFO]: start trainer
+~/paddlejob/workspace/code /mnt
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple, https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting paddlenlp==2.2.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/2b/ec/927e81ad9c349980b1076b2721adcc3c1bbb8f0f432af21995692350c05a/paddlenlp-2.2.4-py3-none-any.whl (1.1 MB)
+Requirement already satisfied: seqeval in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from paddlenlp==2.2.4) (1.2.2)
+Requirement already satisfied: colorama in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from paddlenlp==2.2.4) (0.4.4)
+Requirement already satisfied: colorlog in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from paddlenlp==2.2.4) (4.1.0)
+Requirement already satisfied: h5py in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from paddlenlp==2.2.4) (2.9.0)
+Requirement already satisfied: jieba in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from paddlenlp==2.2.4) (0.42.1)
+Requirement already satisfied: multiprocess in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from paddlenlp==2.2.4) (0.70.12.2)
+Requirement already satisfied: six in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from h5py->paddlenlp==2.2.4) (1.16.0)
+Requirement already satisfied: numpy>=1.7 in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from h5py->paddlenlp==2.2.4) (1.19.5)
+Requirement already satisfied: dill>=0.3.4 in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from multiprocess->paddlenlp==2.2.4) (0.3.4)
+Requirement already satisfied: scikit-learn>=0.21.3 in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from seqeval->paddlenlp==2.2.4) (1.0.2)
+Requirement already satisfied: joblib>=0.11 in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from scikit-learn>=0.21.3->seqeval->paddlenlp==2.2.4) (0.14.1)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from scikit-learn>=0.21.3->seqeval->paddlenlp==2.2.4) (3.0.0)
+Requirement already satisfied: scipy>=1.1.0 in /opt/_internal/cpython-3.7.0/lib/python3.7/site-packages (from scikit-learn>=0.21.3->seqeval->paddlenlp==2.2.4) (1.1.0)
+Installing collected packages: paddlenlp
+  Attempting uninstall: paddlenlp
+    Found existing installation: paddlenlp 2.1.1
+    Uninstalling paddlenlp-2.1.1:
+      Successfully uninstalled paddlenlp-2.1.1
+Successfully installed paddlenlp-2.2.4
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 21.3.1; however, version 22.0.3 is available.
+You should consider upgrading via the '/opt/_internal/cpython-3.7.0/bin/python -m pip install --upgrade pip' command.
+WARNING 2022-02-07 17:00:51,918 launch.py:423] Not found distinct arguments and compiled with cuda or xpu. Default use collective mode
+INFO 2022-02-07 17:00:51,920 launch_utils.py:528] Local start 4 processes. First process distributed environment info (Only For Debug): 
+    +=======================================================================================+
+    |                        Distributed Envs                      Value                    |
+    +---------------------------------------------------------------------------------------+
+    |                       PADDLE_TRAINER_ID                        0                      |
+    |                 PADDLE_CURRENT_ENDPOINT                 127.0.0.1:35001               |
+    |                     PADDLE_TRAINERS_NUM                        4                      |
+    |                PADDLE_TRAINER_ENDPOINTS  ... 0.1:60601,127.0.0.1:56597,127.0.0.1:60662|
+    |                     PADDLE_RANK_IN_NODE                        0                      |
+    |                 PADDLE_LOCAL_DEVICE_IDS                        0                      |
+    |                 PADDLE_WORLD_DEVICE_IDS                     0,1,2,3                   |
+    |                     FLAGS_selected_gpus                        0                      |
+    |             FLAGS_selected_accelerators                        0                      |
+    +=======================================================================================+
+
+INFO 2022-02-07 17:00:51,920 launch_utils.py:532] details abouts PADDLE_TRAINER_ENDPOINTS can be found in log/endpoints.log, and detail running logs maybe found in log/workerlog.0
+-----------  Configuration Arguments -----------
+backend: auto
+elastic_server: None
+force: False
+gpus: None
+heter_devices: 
+heter_worker_num: None
+heter_workers: 
+host: None
+http_port: None
+ips: 127.0.0.1
+job_id: None
+log_dir: log
+np: None
+nproc_per_node: None
+run_mode: None
+scale: 0
+server_num: None
+servers: 
+training_script: run_glue.py
+training_script_args: ['--task_name=mnli', '--output_dir=/root/paddlejob/workspace/output']
+worker_num: None
+workers: 
+------------------------------------------------
+launch train in GPU mode!
+launch proc_id:317 idx:0
+launch proc_id:320 idx:1
+launch proc_id:323 idx:2
+launch proc_id:327 idx:3
+/opt/_internal/cpython-3.7.0/lib/python3.7/site-packages/setuptools/distutils_patch.py:26: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  "Distutils was imported before Setuptools. This usage is discouraged "
+/opt/_internal/cpython-3.7.0/lib/python3.7/site-packages/paddlenlp/transformers/funnel/modeling.py:30: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+  from collections import Iterable
+-----------  Configuration Arguments -----------
+adam_epsilon: 1e-06
+batch_size: 16
+device: gpu
+learning_rate: 1e-05
+logging_steps: 100
+max_seq_length: 512
+max_steps: -1
+model_name_or_path: bert-base-cased
+model_type: megatronbert
+num_train_epochs: 2
+output_dir: /root/paddlejob/workspace/output
+save_steps: 10000
+scale_loss: 32768
+seed: 42
+task_name: mnli
+use_amp: False
+warmup_proportion: 0.06
+warmup_steps: 0
+weight_decay: 0.01
+------------------------------------------------
+server not ready, wait 3 sec to retry...
+not ready endpoints:['127.0.0.1:60601', '127.0.0.1:56597', '127.0.0.1:60662']
+I0207 17:00:57.026825   317 nccl_context.cc:74] init nccl context nranks: 4 local rank: 0 gpu id: 0 ring id: 0
+W0207 17:00:57.891031   317 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 7.0, Driver API Version: 10.1, Runtime API Version: 10.1
+W0207 17:00:57.896232   317 device_context.cc:465] device: 0, cuDNN Version: 7.6.
+2022-02-07 17:01:06,552-INFO: unique_endpoints {'127.0.0.1:35001'}
+2022-02-07 17:01:06,552-INFO: unique_endpoints {'127.0.0.1:35001'}
+2022-02-07 17:01:06,553-INFO: Downloading MNLI.zip from https://bj.bcebos.com/dataset/glue/MNLI.zip
+
+  0%|          | 0/305453 [00:00<?, ?it/s]
+  1%|          | 3780/305453 [00:00<00:07, 37718.56it/s]
+  3%|▎         | 10670/305453 [00:00<00:06, 43644.00it/s]
+  6%|▌         | 17747/305453 [00:00<00:05, 49314.09it/s]
+  8%|▊         | 24833/305453 [00:00<00:05, 54263.50it/s]
+ 10%|█         | 32029/305453 [00:00<00:04, 58583.68it/s]
+ 13%|█▎        | 39204/305453 [00:00<00:04, 61994.28it/s]
+ 15%|█▌        | 46348/305453 [00:00<00:04, 64553.70it/s]
+ 18%|█▊        | 53604/305453 [00:00<00:03, 66758.99it/s]
+ 20%|█▉        | 60897/305453 [00:00<00:03, 68496.93it/s]
+ 22%|██▏       | 68202/305453 [00:01<00:03, 69800.14it/s]
+ 25%|██▍       | 75542/305453 [00:01<00:03, 70840.63it/s]
+ 27%|██▋       | 82937/305453 [00:01<00:03, 71742.77it/s]
+ 30%|██▉       | 90263/305453 [00:01<00:02, 72189.69it/s]
+ 32%|███▏      | 97605/305453 [00:01<00:02, 72548.30it/s]
+ 34%|███▍      | 104992/305453 [00:01<00:02, 72938.03it/s]
+ 37%|███▋      | 112353/305453 [00:01<00:02, 73135.29it/s]
+ 39%|███▉      | 119714/305453 [00:01<00:02, 73275.09it/s]
+ 42%|████▏     | 127057/305453 [00:01<00:02, 73321.05it/s]
+ 44%|████▍     | 134403/305453 [00:01<00:02, 73362.23it/s]
+ 46%|████▋     | 141766/305453 [00:02<00:02, 73440.38it/s]
+ 49%|████▉     | 149111/305453 [00:02<00:02, 73407.90it/s]
+ 51%|█████     | 156461/305453 [00:02<00:02, 73432.70it/s]
+ 54%|█████▎    | 163811/305453 [00:02<00:01, 73451.58it/s]
+ 56%|█████▌    | 171157/305453 [00:02<00:01, 73111.32it/s]
+ 58%|█████▊    | 178469/305453 [00:02<00:01, 72595.63it/s]
+ 61%|██████    | 185828/305453 [00:02<00:01, 72887.15it/s]
+ 63%|██████▎   | 193205/305453 [00:02<00:01, 73149.54it/s]
+ 66%|██████▌   | 200593/305453 [00:02<00:01, 73364.57it/s]
+ 68%|██████▊   | 207947/305453 [00:02<00:01, 73415.30it/s]
+ 70%|███████   | 215290/305453 [00:03<00:01, 73384.09it/s]
+ 73%|███████▎  | 222666/305453 [00:03<00:01, 73494.44it/s]
+ 75%|███████▌  | 230026/305453 [00:03<00:01, 73525.10it/s]
+ 78%|███████▊  | 237406/305453 [00:03<00:00, 73606.06it/s]
+ 80%|████████  | 244767/305453 [00:03<00:00, 73463.77it/s]
+ 83%|████████▎ | 252114/305453 [00:03<00:00, 73418.14it/s]
+ 85%|████████▍ | 259456/305453 [00:03<00:00, 73251.74it/s]
+ 87%|████████▋ | 266807/305453 [00:03<00:00, 73326.85it/s]
+ 90%|████████▉ | 274140/305453 [00:03<00:00, 73265.04it/s]
+ 92%|█████████▏| 281476/305453 [00:03<00:00, 73282.26it/s]
+ 95%|█████████▍| 288819/305453 [00:04<00:00, 73325.50it/s]
+ 97%|█████████▋| 296157/305453 [00:04<00:00, 73340.92it/s]
+ 99%|█████████▉| 303533/305453 [00:04<00:00, 73462.81it/s]
+100%|██████████| 305453/305453 [00:04<00:00, 72152.97it/s]
+2022-02-07 17:01:10,867-INFO: File /root/.paddlenlp/datasets/Glue/MNLI.zip md5 checking...
+2022-02-07 17:01:11,616-INFO: Decompressing /root/.paddlenlp/datasets/Glue/MNLI.zip...
+[2022-02-07 17:01:21,498] [    INFO] - Downloading https://bj.bcebos.com/paddle-hapi/models/bert/bert-base-cased-vocab.txt and saved to /root/.paddlenlp/models/bert-base-cased
+[2022-02-07 17:01:21,499] [    INFO] - Downloading bert-base-cased-vocab.txt from https://bj.bcebos.com/paddle-hapi/models/bert/bert-base-cased-vocab.txt
+
+  0%|          | 0.00/208k [00:00<?, ?B/s]
+100%|██████████| 208k/208k [00:00<00:00, 25.1MB/s]
+2022-02-07 17:01:21,590-INFO: unique_endpoints {'127.0.0.1:35001'}
+global step 100/12272, epoch: 0, batch: 99, rank_id: 0, loss: 0.987552, lr: 0.0000013587, speed: 1.7093 step/s
+global step 200/12272, epoch: 0, batch: 199, rank_id: 0, loss: 0.980092, lr: 0.0000027174, speed: 1.7701 step/s
+global step 300/12272, epoch: 0, batch: 299, rank_id: 0, loss: 0.780214, lr: 0.0000040761, speed: 1.7263 step/s
+global step 400/12272, epoch: 0, batch: 399, rank_id: 0, loss: 0.319753, lr: 0.0000054348, speed: 1.7426 step/s
+global step 500/12272, epoch: 0, batch: 499, rank_id: 0, loss: 0.287098, lr: 0.0000067935, speed: 1.7534 step/s
+global step 600/12272, epoch: 0, batch: 599, rank_id: 0, loss: 0.598354, lr: 0.0000081522, speed: 1.7095 step/s
+global step 700/12272, epoch: 0, batch: 699, rank_id: 0, loss: 0.391920, lr: 0.0000095109, speed: 1.7278 step/s
+global step 800/12272, epoch: 0, batch: 799, rank_id: 0, loss: 0.359093, lr: 0.0000099445, speed: 1.7347 step/s
+global step 900/12272, epoch: 0, batch: 899, rank_id: 0, loss: 0.468213, lr: 0.0000098578, speed: 1.7258 step/s
+global step 1000/12272, epoch: 0, batch: 999, rank_id: 0, loss: 0.448929, lr: 0.0000097712, speed: 1.7551 step/s
+global step 1100/12272, epoch: 0, batch: 1099, rank_id: 0, loss: 0.104509, lr: 0.0000096845, speed: 1.7240 step/s
+global step 1200/12272, epoch: 0, batch: 1199, rank_id: 0, loss: 0.479588, lr: 0.0000095978, speed: 1.7384 step/s
+global step 1300/12272, epoch: 0, batch: 1299, rank_id: 0, loss: 0.259185, lr: 0.0000095111, speed: 1.7224 step/s
+global step 1400/12272, epoch: 0, batch: 1399, rank_id: 0, loss: 0.500351, lr: 0.0000094244, speed: 1.7425 step/s
+global step 1500/12272, epoch: 0, batch: 1499, rank_id: 0, loss: 0.123042, lr: 0.0000093377, speed: 1.7362 step/s
+global step 1600/12272, epoch: 0, batch: 1599, rank_id: 0, loss: 0.618168, lr: 0.0000092510, speed: 1.7462 step/s
+global step 1700/12272, epoch: 0, batch: 1699, rank_id: 0, loss: 0.408082, lr: 0.0000091644, speed: 1.7567 step/s
+global step 1800/12272, epoch: 0, batch: 1799, rank_id: 0, loss: 0.581334, lr: 0.0000090777, speed: 1.7273 step/s
+global step 1900/12272, epoch: 0, batch: 1899, rank_id: 0, loss: 0.183667, lr: 0.0000089910, speed: 1.7440 step/s
+global step 2000/12272, epoch: 0, batch: 1999, rank_id: 0, loss: 0.365735, lr: 0.0000089043, speed: 1.7485 step/s
+global step 2100/12272, epoch: 0, batch: 2099, rank_id: 0, loss: 0.425710, lr: 0.0000088176, speed: 1.7084 step/s
+global step 2200/12272, epoch: 0, batch: 2199, rank_id: 0, loss: 0.275654, lr: 0.0000087309, speed: 1.7153 step/s
+global step 2300/12272, epoch: 0, batch: 2299, rank_id: 0, loss: 0.338991, lr: 0.0000086442, speed: 1.7315 step/s
+global step 2400/12272, epoch: 0, batch: 2399, rank_id: 0, loss: 0.173881, lr: 0.0000085576, speed: 1.7313 step/s
+global step 2500/12272, epoch: 0, batch: 2499, rank_id: 0, loss: 0.201201, lr: 0.0000084709, speed: 1.7143 step/s
+global step 2600/12272, epoch: 0, batch: 2599, rank_id: 0, loss: 0.213364, lr: 0.0000083842, speed: 1.7419 step/s
+global step 2700/12272, epoch: 0, batch: 2699, rank_id: 0, loss: 0.259568, lr: 0.0000082975, speed: 1.7264 step/s
+global step 2800/12272, epoch: 0, batch: 2799, rank_id: 0, loss: 0.221140, lr: 0.0000082108, speed: 1.7101 step/s
+global step 2900/12272, epoch: 0, batch: 2899, rank_id: 0, loss: 0.417887, lr: 0.0000081241, speed: 1.7374 step/s
+global step 3000/12272, epoch: 0, batch: 2999, rank_id: 0, loss: 0.426822, lr: 0.0000080374, speed: 1.7530 step/s
+global step 3100/12272, epoch: 0, batch: 3099, rank_id: 0, loss: 0.149058, lr: 0.0000079508, speed: 1.7077 step/s
+global step 3200/12272, epoch: 0, batch: 3199, rank_id: 0, loss: 0.310772, lr: 0.0000078641, speed: 1.7101 step/s
+global step 3300/12272, epoch: 0, batch: 3299, rank_id: 0, loss: 0.419582, lr: 0.0000077774, speed: 1.7114 step/s
+global step 3400/12272, epoch: 0, batch: 3399, rank_id: 0, loss: 0.242974, lr: 0.0000076907, speed: 1.7298 step/s
+global step 3500/12272, epoch: 0, batch: 3499, rank_id: 0, loss: 0.231046, lr: 0.0000076040, speed: 1.7082 step/s
+global step 3600/12272, epoch: 0, batch: 3599, rank_id: 0, loss: 0.087186, lr: 0.0000075173, speed: 1.7177 step/s
+global step 3700/12272, epoch: 0, batch: 3699, rank_id: 0, loss: 0.266600, lr: 0.0000074307, speed: 1.7234 step/s
+global step 3800/12272, epoch: 0, batch: 3799, rank_id: 0, loss: 0.283189, lr: 0.0000073440, speed: 1.7477 step/s
+global step 3900/12272, epoch: 0, batch: 3899, rank_id: 0, loss: 0.110781, lr: 0.0000072573, speed: 1.7390 step/s
+global step 4000/12272, epoch: 0, batch: 3999, rank_id: 0, loss: 0.526803, lr: 0.0000071706, speed: 1.7311 step/s
+global step 4100/12272, epoch: 0, batch: 4099, rank_id: 0, loss: 0.136908, lr: 0.0000070839, speed: 1.7287 step/s
+global step 4200/12272, epoch: 0, batch: 4199, rank_id: 0, loss: 0.168411, lr: 0.0000069972, speed: 1.7294 step/s
+global step 4300/12272, epoch: 0, batch: 4299, rank_id: 0, loss: 0.102789, lr: 0.0000069105, speed: 1.7482 step/s
+global step 4400/12272, epoch: 0, batch: 4399, rank_id: 0, loss: 0.134064, lr: 0.0000068239, speed: 1.7316 step/s
+global step 4500/12272, epoch: 0, batch: 4499, rank_id: 0, loss: 0.334639, lr: 0.0000067372, speed: 1.7227 step/s
+global step 4600/12272, epoch: 0, batch: 4599, rank_id: 0, loss: 0.277310, lr: 0.0000066505, speed: 1.7092 step/s
+global step 4700/12272, epoch: 0, batch: 4699, rank_id: 0, loss: 0.330380, lr: 0.0000065638, speed: 1.7142 step/s
+global step 4800/12272, epoch: 0, batch: 4799, rank_id: 0, loss: 0.133740, lr: 0.0000064771, speed: 1.7191 step/s
+global step 4900/12272, epoch: 0, batch: 4899, rank_id: 0, loss: 0.312291, lr: 0.0000063904, speed: 1.7376 step/s
+global step 5000/12272, epoch: 0, batch: 4999, rank_id: 0, loss: 0.244872, lr: 0.0000063037, speed: 1.7044 step/s
+global step 5100/12272, epoch: 0, batch: 5099, rank_id: 0, loss: 0.716901, lr: 0.0000062171, speed: 1.7070 step/s
+global step 5200/12272, epoch: 0, batch: 5199, rank_id: 0, loss: 0.142165, lr: 0.0000061304, speed: 1.7141 step/s
+global step 5300/12272, epoch: 0, batch: 5299, rank_id: 0, loss: 0.412990, lr: 0.0000060437, speed: 1.7375 step/s
+global step 5400/12272, epoch: 0, batch: 5399, rank_id: 0, loss: 0.095805, lr: 0.0000059570, speed: 1.7268 step/s
+global step 5500/12272, epoch: 0, batch: 5499, rank_id: 0, loss: 0.561354, lr: 0.0000058703, speed: 1.7205 step/s
+global step 5600/12272, epoch: 0, batch: 5599, rank_id: 0, loss: 0.130399, lr: 0.0000057836, speed: 1.7588 step/s
+global step 5700/12272, epoch: 0, batch: 5699, rank_id: 0, loss: 0.258973, lr: 0.0000056969, speed: 1.7237 step/s
+global step 5800/12272, epoch: 0, batch: 5799, rank_id: 0, loss: 0.118635, lr: 0.0000056103, speed: 1.7097 step/s
+global step 5900/12272, epoch: 0, batch: 5899, rank_id: 0, loss: 0.245375, lr: 0.0000055236, speed: 1.6744 step/s
+global step 6000/12272, epoch: 0, batch: 5999, rank_id: 0, loss: 0.146331, lr: 0.0000054369, speed: 1.7464 step/s
+global step 6100/12272, epoch: 0, batch: 6099, rank_id: 0, loss: 0.265751, lr: 0.0000053502, speed: 1.7001 step/s
+global step 6200/12272, epoch: 1, batch: 63, rank_id: 0, loss: 0.538868, lr: 0.0000052635, speed: 1.7137 step/s
+global step 6300/12272, epoch: 1, batch: 163, rank_id: 0, loss: 0.524353, lr: 0.0000051768, speed: 1.7244 step/s
+global step 6400/12272, epoch: 1, batch: 263, rank_id: 0, loss: 0.676818, lr: 0.0000050902, speed: 1.6997 step/s
+global step 6500/12272, epoch: 1, batch: 363, rank_id: 0, loss: 0.618629, lr: 0.0000050035, speed: 1.7361 step/s
+global step 6600/12272, epoch: 1, batch: 463, rank_id: 0, loss: 0.172177, lr: 0.0000049168, speed: 1.7347 step/s
+global step 6700/12272, epoch: 1, batch: 563, rank_id: 0, loss: 0.097135, lr: 0.0000048301, speed: 1.7491 step/s
+global step 6800/12272, epoch: 1, batch: 663, rank_id: 0, loss: 0.171333, lr: 0.0000047434, speed: 1.7140 step/s
+global step 6900/12272, epoch: 1, batch: 763, rank_id: 0, loss: 0.101401, lr: 0.0000046567, speed: 1.7123 step/s
+global step 7000/12272, epoch: 1, batch: 863, rank_id: 0, loss: 0.222009, lr: 0.0000045700, speed: 1.7288 step/s
+global step 7100/12272, epoch: 1, batch: 963, rank_id: 0, loss: 0.028687, lr: 0.0000044834, speed: 1.7268 step/s
+global step 7200/12272, epoch: 1, batch: 1063, rank_id: 0, loss: 0.327879, lr: 0.0000043967, speed: 1.7072 step/s
+global step 7300/12272, epoch: 1, batch: 1163, rank_id: 0, loss: 0.205808, lr: 0.0000043100, speed: 1.7415 step/s
+global step 7400/12272, epoch: 1, batch: 1263, rank_id: 0, loss: 0.542486, lr: 0.0000042233, speed: 1.7298 step/s
+global step 7500/12272, epoch: 1, batch: 1363, rank_id: 0, loss: 0.258505, lr: 0.0000041366, speed: 1.7145 step/s
+global step 7600/12272, epoch: 1, batch: 1463, rank_id: 0, loss: 0.460486, lr: 0.0000040499, speed: 1.7046 step/s
+global step 7700/12272, epoch: 1, batch: 1563, rank_id: 0, loss: 0.106865, lr: 0.0000039632, speed: 1.7414 step/s
+global step 7800/12272, epoch: 1, batch: 1663, rank_id: 0, loss: 0.667392, lr: 0.0000038766, speed: 1.7334 step/s
+global step 7900/12272, epoch: 1, batch: 1763, rank_id: 0, loss: 0.104529, lr: 0.0000037899, speed: 1.7314 step/s
+global step 8000/12272, epoch: 1, batch: 1863, rank_id: 0, loss: 0.149235, lr: 0.0000037032, speed: 1.7395 step/s
+global step 8100/12272, epoch: 1, batch: 1963, rank_id: 0, loss: 0.131860, lr: 0.0000036165, speed: 1.7377 step/s
+global step 8200/12272, epoch: 1, batch: 2063, rank_id: 0, loss: 0.362715, lr: 0.0000035298, speed: 1.7294 step/s
+global step 8300/12272, epoch: 1, batch: 2163, rank_id: 0, loss: 0.279587, lr: 0.0000034431, speed: 1.6996 step/s
+global step 8400/12272, epoch: 1, batch: 2263, rank_id: 0, loss: 0.394698, lr: 0.0000033564, speed: 1.7145 step/s
+global step 8500/12272, epoch: 1, batch: 2363, rank_id: 0, loss: 0.332080, lr: 0.0000032698, speed: 1.7277 step/s
+global step 8600/12272, epoch: 1, batch: 2463, rank_id: 0, loss: 0.262531, lr: 0.0000031831, speed: 1.7480 step/s
+global step 8700/12272, epoch: 1, batch: 2563, rank_id: 0, loss: 0.287945, lr: 0.0000030964, speed: 1.7555 step/s
+global step 8800/12272, epoch: 1, batch: 2663, rank_id: 0, loss: 0.407072, lr: 0.0000030097, speed: 1.7382 step/s
+global step 8900/12272, epoch: 1, batch: 2763, rank_id: 0, loss: 0.424635, lr: 0.0000029230, speed: 1.7525 step/s
+global step 9000/12272, epoch: 1, batch: 2863, rank_id: 0, loss: 0.350156, lr: 0.0000028363, speed: 1.7452 step/s
+INFO 2022-02-07 19:04:15,014 launch.py:311] Local processes completed.
+global step 9100/12272, epoch: 1, batch: 2963, rank_id: 0, loss: 0.122950, lr: 0.0000027497, speed: 1.7416 step/s
+global step 9200/12272, epoch: 1, batch: 3063, rank_id: 0, loss: 0.190756, lr: 0.0000026630, speed: 1.7313 step/s
+global step 9300/12272, epoch: 1, batch: 3163, rank_id: 0, loss: 0.106184, lr: 0.0000025763, speed: 1.7208 step/s
+global step 9400/12272, epoch: 1, batch: 3263, rank_id: 0, loss: 0.371087, lr: 0.0000024896, speed: 1.7062 step/s
+global step 9500/12272, epoch: 1, batch: 3363, rank_id: 0, loss: 0.258843, lr: 0.0000024029, speed: 1.7328 step/s
+global step 9600/12272, epoch: 1, batch: 3463, rank_id: 0, loss: 0.234967, lr: 0.0000023162, speed: 1.7135 step/s
+global step 9700/12272, epoch: 1, batch: 3563, rank_id: 0, loss: 0.343789, lr: 0.0000022295, speed: 1.7058 step/s
+global step 9800/12272, epoch: 1, batch: 3663, rank_id: 0, loss: 0.346635, lr: 0.0000021429, speed: 1.6937 step/s
+global step 9900/12272, epoch: 1, batch: 3763, rank_id: 0, loss: 0.143048, lr: 0.0000020562, speed: 1.7398 step/s
+global step 10000/12272, epoch: 1, batch: 3863, rank_id: 0, loss: 0.277072, lr: 0.0000019695, speed: 1.7081 step/s
+eval loss: 0.240024, acc: 0.8979113601630158, eval loss: 0.378545, acc: 0.897986167615948, eval done total : 118.99431586265564 s
+global step 10100/12272, epoch: 1, batch: 3963, rank_id: 0, loss: 0.210452, lr: 0.0000018828, speed: 0.5534 step/s
+global step 10200/12272, epoch: 1, batch: 4063, rank_id: 0, loss: 0.063921, lr: 0.0000017961, speed: 1.7104 step/s
+global step 10300/12272, epoch: 1, batch: 4163, rank_id: 0, loss: 0.114351, lr: 0.0000017094, speed: 1.6958 step/s
+global step 10400/12272, epoch: 1, batch: 4263, rank_id: 0, loss: 0.252587, lr: 0.0000016227, speed: 1.7051 step/s
+global step 10500/12272, epoch: 1, batch: 4363, rank_id: 0, loss: 0.223327, lr: 0.0000015361, speed: 1.7201 step/s
+global step 10600/12272, epoch: 1, batch: 4463, rank_id: 0, loss: 0.316371, lr: 0.0000014494, speed: 1.7581 step/s
+global step 10700/12272, epoch: 1, batch: 4563, rank_id: 0, loss: 0.148978, lr: 0.0000013627, speed: 1.7289 step/s
+global step 10800/12272, epoch: 1, batch: 4663, rank_id: 0, loss: 0.169348, lr: 0.0000012760, speed: 1.7223 step/s
+global step 10900/12272, epoch: 1, batch: 4763, rank_id: 0, loss: 0.082584, lr: 0.0000011893, speed: 1.7408 step/s
+global step 11000/12272, epoch: 1, batch: 4863, rank_id: 0, loss: 0.092744, lr: 0.0000011026, speed: 1.7041 step/s
+global step 11100/12272, epoch: 1, batch: 4963, rank_id: 0, loss: 0.038907, lr: 0.0000010160, speed: 1.7167 step/s
+global step 11200/12272, epoch: 1, batch: 5063, rank_id: 0, loss: 0.328944, lr: 0.0000009293, speed: 1.6774 step/s
+global step 11300/12272, epoch: 1, batch: 5163, rank_id: 0, loss: 0.067964, lr: 0.0000008426, speed: 1.7141 step/s
+global step 11400/12272, epoch: 1, batch: 5263, rank_id: 0, loss: 0.081127, lr: 0.0000007559, speed: 1.7126 step/s
+global step 11500/12272, epoch: 1, batch: 5363, rank_id: 0, loss: 0.331801, lr: 0.0000006692, speed: 1.7343 step/s
+global step 11600/12272, epoch: 1, batch: 5463, rank_id: 0, loss: 0.786208, lr: 0.0000005825, speed: 1.7217 step/s
+global step 11700/12272, epoch: 1, batch: 5563, rank_id: 0, loss: 0.315397, lr: 0.0000004958, speed: 1.7425 step/s
+global step 11800/12272, epoch: 1, batch: 5663, rank_id: 0, loss: 0.043895, lr: 0.0000004092, speed: 1.7463 step/s
+global step 11900/12272, epoch: 1, batch: 5763, rank_id: 0, loss: 0.082956, lr: 0.0000003225, speed: 1.7235 step/s
+global step 12000/12272, epoch: 1, batch: 5863, rank_id: 0, loss: 0.133433, lr: 0.0000002358, speed: 1.7452 step/s
+global step 12100/12272, epoch: 1, batch: 5963, rank_id: 0, loss: 0.374275, lr: 0.0000001491, speed: 1.7160 step/s
+global step 12200/12272, epoch: 1, batch: 6063, rank_id: 0, loss: 0.159601, lr: 0.0000000624, speed: 1.7057 step/s
+eval loss: 0.186327, acc: 0.8992358634742741, eval loss: 0.332409, acc: 0.8968673718470301, eval done total : 118.65499472618103 s
+/mnt
+[INFO]: train job success!

@@ -1,0 +1,396 @@
+[INFO]: current net device: eth0, ip: 172.16.28.117
+[INFO]: paddle job envs:
+POD_IP=job-aa027421d682f394573d0203dd438662-trainer-0.job-aa027421d682f394573d0203dd438662
+PADDLE_PORT=12345
+PADDLE_TRAINER_ID=0
+PADDLE_TRAINERS_NUM=1
+PADDLE_USE_CUDA=1
+NCCL_SOCKET_IFNAME=eth0
+PADDLE_IS_LOCAL=1
+OUTPUT_PATH=/root/paddlejob/workspace/output
+LOCAL_LOG_PATH=/root/paddlejob/workspace/log
+LOCAL_MOUNT_PATH=/mnt/code_20220205211521,/mnt/datasets_20220205211521
+JOB_ID=job-aa027421d682f394573d0203dd438662
+TRAINING_ROLE=TRAINER
+[INFO]: user command: bash run.sh
+[INFO]: start trainer
+~/paddlejob/workspace/code /mnt
+[2022-02-05 21:15:26,029] [    INFO] - Downloading https://paddle-hapi.bj.bcebos.com/models/bert/bert-base-cased-vocab.txt and saved to /root/.paddlenlp/models/bert-base-cased
+[2022-02-05 21:15:26,029] [    INFO] - Downloading bert-base-cased-vocab.txt from https://paddle-hapi.bj.bcebos.com/models/bert/bert-base-cased-vocab.txt
+  0%|          | 0/209 [00:00<?, ?it/s]100%|██████████| 209/209 [00:00<00:00, 4563.44it/s]
+W0205 21:15:31.134935   226 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W0205 21:15:31.142563   226 device_context.cc:465] device: 0, cuDNN Version: 7.6.
+global step 100, epoch: 1, batch: 100, loss: 5.659999, speed: 1.27 step/s
+global step 200, epoch: 1, batch: 200, loss: 5.294277, speed: 1.26 step/s
+global step 300, epoch: 1, batch: 300, loss: 4.414964, speed: 1.29 step/s
+global step 400, epoch: 1, batch: 400, loss: 2.058729, speed: 1.29 step/s
+global step 500, epoch: 1, batch: 500, loss: 2.204105, speed: 1.33 step/s
+global step 600, epoch: 1, batch: 600, loss: 1.715199, speed: 1.35 step/s
+global step 700, epoch: 1, batch: 700, loss: 1.024812, speed: 1.35 step/s
+global step 800, epoch: 1, batch: 800, loss: 1.911904, speed: 1.31 step/s
+global step 900, epoch: 1, batch: 900, loss: 1.004142, speed: 1.31 step/s
+global step 1000, epoch: 1, batch: 1000, loss: 0.878666, speed: 1.29 step/s
+global step 1100, epoch: 1, batch: 1100, loss: 0.633150, speed: 1.29 step/s
+global step 1200, epoch: 1, batch: 1200, loss: 0.451401, speed: 1.35 step/s
+global step 1300, epoch: 1, batch: 1300, loss: 1.366875, speed: 1.26 step/s
+global step 1400, epoch: 1, batch: 1400, loss: 0.967024, speed: 1.28 step/s
+global step 1500, epoch: 1, batch: 1500, loss: 1.304725, speed: 1.26 step/s
+global step 1600, epoch: 1, batch: 1600, loss: 0.763907, speed: 1.27 step/s
+global step 1700, epoch: 1, batch: 1700, loss: 1.362698, speed: 1.24 step/s
+global step 1800, epoch: 1, batch: 1800, loss: 0.842855, speed: 1.28 step/s
+global step 1900, epoch: 1, batch: 1900, loss: 0.900706, speed: 1.27 step/s
+global step 2000, epoch: 1, batch: 2000, loss: 1.390027, speed: 1.37 step/s
+global step 2100, epoch: 1, batch: 2100, loss: 0.491790, speed: 1.26 step/s
+global step 2200, epoch: 1, batch: 2200, loss: 0.760770, speed: 1.22 step/s
+global step 2300, epoch: 1, batch: 2300, loss: 0.714128, speed: 1.25 step/s
+global step 2400, epoch: 1, batch: 2400, loss: 0.368869, speed: 1.28 step/s
+global step 2500, epoch: 1, batch: 2500, loss: 0.847010, speed: 1.29 step/s
+global step 2600, epoch: 1, batch: 2600, loss: 1.184461, speed: 1.24 step/s
+global step 2700, epoch: 1, batch: 2700, loss: 0.879803, speed: 1.24 step/s
+global step 2800, epoch: 1, batch: 2800, loss: 0.937371, speed: 1.35 step/s
+global step 2900, epoch: 1, batch: 2900, loss: 1.150320, speed: 1.28 step/s
+global step 3000, epoch: 1, batch: 3000, loss: 1.866102, speed: 1.28 step/s
+global step 3100, epoch: 1, batch: 3100, loss: 0.701365, speed: 1.24 step/s
+global step 3200, epoch: 1, batch: 3200, loss: 0.364814, speed: 1.30 step/s
+global step 3300, epoch: 1, batch: 3300, loss: 0.350224, speed: 1.35 step/s
+global step 3400, epoch: 1, batch: 3400, loss: 1.335384, speed: 1.33 step/s
+global step 3500, epoch: 1, batch: 3500, loss: 1.040457, speed: 1.31 step/s
+global step 3600, epoch: 1, batch: 3600, loss: 0.996355, speed: 1.25 step/s
+global step 3700, epoch: 1, batch: 3700, loss: 0.328526, speed: 1.29 step/s
+global step 3800, epoch: 1, batch: 3800, loss: 0.895145, speed: 1.26 step/s
+global step 3900, epoch: 1, batch: 3900, loss: 0.705745, speed: 1.31 step/s
+global step 4000, epoch: 1, batch: 4000, loss: 1.241911, speed: 1.26 step/s
+global step 4100, epoch: 1, batch: 4100, loss: 0.218022, speed: 1.33 step/s
+global step 4200, epoch: 1, batch: 4200, loss: 1.403759, speed: 1.29 step/s
+global step 4300, epoch: 1, batch: 4300, loss: 1.637582, speed: 1.29 step/s
+global step 4400, epoch: 1, batch: 4400, loss: 1.277778, speed: 1.25 step/s
+global step 4500, epoch: 1, batch: 4500, loss: 1.097317, speed: 1.30 step/s
+global step 4600, epoch: 1, batch: 4600, loss: 1.172348, speed: 1.31 step/s
+global step 4700, epoch: 1, batch: 4700, loss: 0.611463, speed: 1.28 step/s
+global step 4800, epoch: 1, batch: 4800, loss: 0.828379, speed: 1.33 step/s
+global step 4900, epoch: 1, batch: 4900, loss: 1.001053, speed: 1.37 step/s
+global step 5000, epoch: 1, batch: 5000, loss: 0.313863, speed: 1.25 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_5000
+global step 5100, epoch: 1, batch: 5100, loss: 0.490131, speed: 1.19 step/s
+global step 5200, epoch: 1, batch: 5200, loss: 0.715790, speed: 1.28 step/s
+global step 5300, epoch: 1, batch: 5300, loss: 1.037918, speed: 1.28 step/s
+global step 5400, epoch: 1, batch: 5400, loss: 1.048045, speed: 1.36 step/s
+global step 5500, epoch: 1, batch: 5500, loss: 1.074094, speed: 1.26 step/s
+global step 5600, epoch: 1, batch: 5600, loss: 0.566160, speed: 1.22 step/s
+global step 5700, epoch: 1, batch: 5700, loss: 0.438999, speed: 1.37 step/s
+global step 5800, epoch: 1, batch: 5800, loss: 0.953092, speed: 1.35 step/s
+global step 5900, epoch: 1, batch: 5900, loss: 0.516577, speed: 1.28 step/s
+global step 6000, epoch: 1, batch: 6000, loss: 0.379031, speed: 1.24 step/s
+global step 6100, epoch: 1, batch: 6100, loss: 0.546491, speed: 1.30 step/s
+global step 6200, epoch: 1, batch: 6200, loss: 0.726060, speed: 1.28 step/s
+global step 6300, epoch: 1, batch: 6300, loss: 1.149450, speed: 1.27 step/s
+global step 6400, epoch: 1, batch: 6400, loss: 1.243634, speed: 1.33 step/s
+global step 6500, epoch: 1, batch: 6500, loss: 0.777387, speed: 1.38 step/s
+global step 6600, epoch: 1, batch: 6600, loss: 1.319224, speed: 1.27 step/s
+global step 6700, epoch: 1, batch: 6700, loss: 0.751965, speed: 1.38 step/s
+global step 6800, epoch: 1, batch: 6800, loss: 1.640713, speed: 1.27 step/s
+global step 6900, epoch: 1, batch: 6900, loss: 0.607130, speed: 1.29 step/s
+global step 7000, epoch: 1, batch: 7000, loss: 0.269808, speed: 1.26 step/s
+global step 7100, epoch: 1, batch: 7100, loss: 1.186606, speed: 1.28 step/s
+global step 7200, epoch: 1, batch: 7200, loss: 0.295637, speed: 1.28 step/s
+global step 7300, epoch: 1, batch: 7300, loss: 1.318974, speed: 1.27 step/s
+global step 7400, epoch: 1, batch: 7400, loss: 0.302025, speed: 1.30 step/s
+global step 7500, epoch: 1, batch: 7500, loss: 0.405670, speed: 1.32 step/s
+global step 7600, epoch: 1, batch: 7600, loss: 1.010041, speed: 1.31 step/s
+global step 7700, epoch: 1, batch: 7700, loss: 0.901328, speed: 1.26 step/s
+global step 7800, epoch: 1, batch: 7800, loss: 0.473891, speed: 1.31 step/s
+global step 7900, epoch: 1, batch: 7900, loss: 0.796171, speed: 1.28 step/s
+global step 8000, epoch: 1, batch: 8000, loss: 1.674979, speed: 1.20 step/s
+global step 8100, epoch: 1, batch: 8100, loss: 1.854095, speed: 1.31 step/s
+global step 8200, epoch: 1, batch: 8200, loss: 0.866751, speed: 1.32 step/s
+global step 8300, epoch: 1, batch: 8300, loss: 0.692094, speed: 1.20 step/s
+global step 8400, epoch: 1, batch: 8400, loss: 0.404983, speed: 1.33 step/s
+global step 8500, epoch: 1, batch: 8500, loss: 0.536479, speed: 1.34 step/s
+global step 8600, epoch: 1, batch: 8600, loss: 0.138160, speed: 1.30 step/s
+global step 8700, epoch: 1, batch: 8700, loss: 1.457913, speed: 1.31 step/s
+global step 8800, epoch: 1, batch: 8800, loss: 1.546893, speed: 1.29 step/s
+global step 8900, epoch: 1, batch: 8900, loss: 0.693005, speed: 1.28 step/s
+global step 9000, epoch: 1, batch: 9000, loss: 0.449289, speed: 1.26 step/s
+global step 9100, epoch: 1, batch: 9100, loss: 0.283979, speed: 1.26 step/s
+global step 9200, epoch: 1, batch: 9200, loss: 0.448582, speed: 1.30 step/s
+global step 9300, epoch: 1, batch: 9300, loss: 0.232415, speed: 1.33 step/s
+global step 9400, epoch: 1, batch: 9400, loss: 0.959928, speed: 1.32 step/s
+global step 9500, epoch: 1, batch: 9500, loss: 1.104643, speed: 1.26 step/s
+global step 9600, epoch: 1, batch: 9600, loss: 0.180083, speed: 1.36 step/s
+global step 9700, epoch: 1, batch: 9700, loss: 0.617141, speed: 1.26 step/s
+global step 9800, epoch: 1, batch: 9800, loss: 0.658827, speed: 1.33 step/s
+global step 9900, epoch: 1, batch: 9900, loss: 0.136252, speed: 1.26 step/s
+global step 10000, epoch: 1, batch: 10000, loss: 1.086579, speed: 1.26 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_10000
+global step 10100, epoch: 1, batch: 10100, loss: 0.193594, speed: 1.21 step/s
+global step 10200, epoch: 1, batch: 10200, loss: 0.440596, speed: 1.22 step/s
+global step 10300, epoch: 1, batch: 10300, loss: 1.037778, speed: 1.27 step/s
+global step 10400, epoch: 1, batch: 10400, loss: 0.273530, speed: 1.33 step/s
+global step 10500, epoch: 1, batch: 10500, loss: 1.377311, speed: 1.28 step/s
+global step 10600, epoch: 1, batch: 10600, loss: 0.207920, speed: 1.33 step/s
+global step 10700, epoch: 1, batch: 10700, loss: 0.722493, speed: 1.24 step/s
+global step 10800, epoch: 1, batch: 10800, loss: 0.725146, speed: 1.27 step/s
+global step 10900, epoch: 1, batch: 10900, loss: 0.901042, speed: 1.32 step/s
+global step 11000, epoch: 1, batch: 11000, loss: 1.857716, speed: 1.35 step/s
+global step 11100, epoch: 1, batch: 11100, loss: 0.460314, speed: 1.27 step/s
+global step 11200, epoch: 1, batch: 11200, loss: 1.273142, speed: 1.30 step/s
+global step 11300, epoch: 1, batch: 11300, loss: 0.761547, speed: 1.35 step/s
+global step 11400, epoch: 1, batch: 11400, loss: 0.411746, speed: 1.29 step/s
+global step 11500, epoch: 1, batch: 11500, loss: 0.669209, speed: 1.31 step/s
+global step 11600, epoch: 1, batch: 11600, loss: 0.566041, speed: 1.31 step/s
+global step 11700, epoch: 1, batch: 11700, loss: 0.649335, speed: 1.22 step/s
+global step 11800, epoch: 1, batch: 11800, loss: 1.340534, speed: 1.28 step/s
+global step 11900, epoch: 1, batch: 11900, loss: 0.962047, speed: 1.26 step/s
+global step 12000, epoch: 1, batch: 12000, loss: 1.405632, speed: 1.28 step/s
+global step 12100, epoch: 1, batch: 12100, loss: 0.266841, speed: 1.33 step/s
+global step 12200, epoch: 1, batch: 12200, loss: 1.612107, speed: 1.31 step/s
+global step 12300, epoch: 1, batch: 12300, loss: 0.448143, speed: 1.26 step/s
+global step 12400, epoch: 1, batch: 12400, loss: 0.659956, speed: 1.25 step/s
+global step 12500, epoch: 1, batch: 12500, loss: 0.558632, speed: 1.28 step/s
+global step 12600, epoch: 1, batch: 12600, loss: 1.710634, speed: 1.32 step/s
+global step 12700, epoch: 1, batch: 12700, loss: 1.973585, speed: 1.29 step/s
+global step 12800, epoch: 1, batch: 12800, loss: 0.700548, speed: 1.26 step/s
+global step 12900, epoch: 1, batch: 12900, loss: 0.954711, speed: 1.25 step/s
+global step 13000, epoch: 1, batch: 13000, loss: 0.125053, speed: 1.26 step/s
+global step 13100, epoch: 1, batch: 13100, loss: 0.131083, speed: 1.34 step/s
+global step 13200, epoch: 1, batch: 13200, loss: 1.452424, speed: 1.28 step/s
+global step 13300, epoch: 1, batch: 13300, loss: 0.271051, speed: 1.28 step/s
+global step 13400, epoch: 1, batch: 13400, loss: 0.763131, speed: 1.30 step/s
+global step 13500, epoch: 1, batch: 13500, loss: 0.828609, speed: 1.27 step/s
+global step 13600, epoch: 1, batch: 13600, loss: 0.479839, speed: 1.30 step/s
+global step 13700, epoch: 1, batch: 13700, loss: 0.616822, speed: 1.23 step/s
+global step 13800, epoch: 1, batch: 13800, loss: 1.146375, speed: 1.28 step/s
+global step 13900, epoch: 1, batch: 13900, loss: 1.105428, speed: 1.29 step/s
+global step 14000, epoch: 1, batch: 14000, loss: 0.695465, speed: 1.27 step/s
+global step 14100, epoch: 1, batch: 14100, loss: 1.135116, speed: 1.24 step/s
+global step 14200, epoch: 1, batch: 14200, loss: 0.487592, speed: 1.34 step/s
+global step 14300, epoch: 1, batch: 14300, loss: 0.860758, speed: 1.31 step/s
+global step 14400, epoch: 1, batch: 14400, loss: 1.425758, speed: 1.27 step/s
+global step 14500, epoch: 1, batch: 14500, loss: 0.876768, speed: 1.30 step/s
+global step 14600, epoch: 1, batch: 14600, loss: 1.329161, speed: 1.28 step/s
+global step 14700, epoch: 1, batch: 14700, loss: 0.249020, speed: 1.31 step/s
+global step 14800, epoch: 1, batch: 14800, loss: 0.713406, speed: 1.27 step/s
+global step 14900, epoch: 1, batch: 14900, loss: 0.363669, speed: 1.29 step/s
+global step 15000, epoch: 1, batch: 15000, loss: 1.160217, speed: 1.28 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_15000
+global step 15100, epoch: 1, batch: 15100, loss: 0.328552, speed: 1.26 step/s
+global step 15200, epoch: 1, batch: 15200, loss: 0.445662, speed: 1.27 step/s
+global step 15300, epoch: 1, batch: 15300, loss: 1.401088, speed: 1.26 step/s
+global step 15400, epoch: 1, batch: 15400, loss: 0.140439, speed: 1.32 step/s
+global step 15500, epoch: 1, batch: 15500, loss: 0.569430, speed: 1.26 step/s
+global step 15600, epoch: 1, batch: 15600, loss: 0.686405, speed: 1.30 step/s
+global step 15700, epoch: 1, batch: 15700, loss: 0.573178, speed: 1.31 step/s
+global step 15800, epoch: 1, batch: 15800, loss: 0.561006, speed: 1.27 step/s
+global step 15900, epoch: 1, batch: 15900, loss: 0.491968, speed: 1.30 step/s
+global step 16000, epoch: 1, batch: 16000, loss: 1.114950, speed: 1.26 step/s
+global step 16100, epoch: 1, batch: 16100, loss: 0.431425, speed: 1.36 step/s
+global step 16200, epoch: 1, batch: 16200, loss: 0.814533, speed: 1.27 step/s
+global step 16300, epoch: 1, batch: 16300, loss: 0.328539, speed: 1.33 step/s
+global step 16400, epoch: 2, batch: 71, loss: 0.484446, speed: 1.31 step/s
+global step 16500, epoch: 2, batch: 171, loss: 0.114789, speed: 1.29 step/s
+global step 16600, epoch: 2, batch: 271, loss: 0.214710, speed: 1.27 step/s
+global step 16700, epoch: 2, batch: 371, loss: 0.710055, speed: 1.36 step/s
+global step 16800, epoch: 2, batch: 471, loss: 0.470770, speed: 1.29 step/s
+global step 16900, epoch: 2, batch: 571, loss: 0.295705, speed: 1.33 step/s
+global step 17000, epoch: 2, batch: 671, loss: 0.863488, speed: 1.27 step/s
+global step 17100, epoch: 2, batch: 771, loss: 0.271386, speed: 1.33 step/s
+global step 17200, epoch: 2, batch: 871, loss: 0.572826, speed: 1.25 step/s
+global step 17300, epoch: 2, batch: 971, loss: 0.910707, speed: 1.25 step/s
+global step 17400, epoch: 2, batch: 1071, loss: 0.187586, speed: 1.27 step/s
+global step 17500, epoch: 2, batch: 1171, loss: 0.206822, speed: 1.36 step/s
+global step 17600, epoch: 2, batch: 1271, loss: 0.508674, speed: 1.30 step/s
+global step 17700, epoch: 2, batch: 1371, loss: 0.387805, speed: 1.27 step/s
+global step 17800, epoch: 2, batch: 1471, loss: 0.445679, speed: 1.25 step/s
+global step 17900, epoch: 2, batch: 1571, loss: 0.435684, speed: 1.31 step/s
+global step 18000, epoch: 2, batch: 1671, loss: 0.189019, speed: 1.31 step/s
+global step 18100, epoch: 2, batch: 1771, loss: 0.345570, speed: 1.32 step/s
+global step 18200, epoch: 2, batch: 1871, loss: 0.573996, speed: 1.27 step/s
+global step 18300, epoch: 2, batch: 1971, loss: 1.910042, speed: 1.33 step/s
+global step 18400, epoch: 2, batch: 2071, loss: 0.318363, speed: 1.36 step/s
+global step 18500, epoch: 2, batch: 2171, loss: 0.881585, speed: 1.25 step/s
+global step 18600, epoch: 2, batch: 2271, loss: 0.136792, speed: 1.24 step/s
+global step 18700, epoch: 2, batch: 2371, loss: 0.290763, speed: 1.23 step/s
+global step 18800, epoch: 2, batch: 2471, loss: 0.089268, speed: 1.22 step/s
+global step 18900, epoch: 2, batch: 2571, loss: 0.737091, speed: 1.30 step/s
+global step 19000, epoch: 2, batch: 2671, loss: 0.372452, speed: 1.26 step/s
+global step 19100, epoch: 2, batch: 2771, loss: 0.195857, speed: 1.32 step/s
+global step 19200, epoch: 2, batch: 2871, loss: 0.088670, speed: 1.29 step/s
+global step 19300, epoch: 2, batch: 2971, loss: 0.221357, speed: 1.30 step/s
+global step 19400, epoch: 2, batch: 3071, loss: 1.179212, speed: 1.31 step/s
+global step 19500, epoch: 2, batch: 3171, loss: 1.048925, speed: 1.31 step/s
+global step 19600, epoch: 2, batch: 3271, loss: 0.370837, speed: 1.35 step/s
+global step 19700, epoch: 2, batch: 3371, loss: 0.179153, speed: 1.34 step/s
+global step 19800, epoch: 2, batch: 3471, loss: 0.429775, speed: 1.27 step/s
+global step 19900, epoch: 2, batch: 3571, loss: 0.417793, speed: 1.32 step/s
+global step 20000, epoch: 2, batch: 3671, loss: 1.403895, speed: 1.26 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_20000
+global step 20100, epoch: 2, batch: 3771, loss: 0.383237, speed: 1.19 step/s
+global step 20200, epoch: 2, batch: 3871, loss: 0.271814, speed: 1.22 step/s
+global step 20300, epoch: 2, batch: 3971, loss: 0.383452, speed: 1.28 step/s
+global step 20400, epoch: 2, batch: 4071, loss: 1.625580, speed: 1.27 step/s
+global step 20500, epoch: 2, batch: 4171, loss: 0.257044, speed: 1.31 step/s
+global step 20600, epoch: 2, batch: 4271, loss: 1.109790, speed: 1.26 step/s
+global step 20700, epoch: 2, batch: 4371, loss: 0.559702, speed: 1.25 step/s
+global step 20800, epoch: 2, batch: 4471, loss: 1.501833, speed: 1.32 step/s
+global step 20900, epoch: 2, batch: 4571, loss: 0.336797, speed: 1.26 step/s
+global step 21000, epoch: 2, batch: 4671, loss: 0.626031, speed: 1.31 step/s
+global step 21100, epoch: 2, batch: 4771, loss: 0.220862, speed: 1.30 step/s
+global step 21200, epoch: 2, batch: 4871, loss: 0.374192, speed: 1.34 step/s
+global step 21300, epoch: 2, batch: 4971, loss: 0.379575, speed: 1.25 step/s
+global step 21400, epoch: 2, batch: 5071, loss: 0.509878, speed: 1.31 step/s
+global step 21500, epoch: 2, batch: 5171, loss: 0.814718, speed: 1.34 step/s
+global step 21600, epoch: 2, batch: 5271, loss: 0.859953, speed: 1.24 step/s
+global step 21700, epoch: 2, batch: 5371, loss: 1.403231, speed: 1.38 step/s
+global step 21800, epoch: 2, batch: 5471, loss: 0.407876, speed: 1.28 step/s
+global step 21900, epoch: 2, batch: 5571, loss: 0.362928, speed: 1.27 step/s
+global step 22000, epoch: 2, batch: 5671, loss: 0.867483, speed: 1.30 step/s
+global step 22100, epoch: 2, batch: 5771, loss: 0.295348, speed: 1.30 step/s
+global step 22200, epoch: 2, batch: 5871, loss: 0.710811, speed: 1.29 step/s
+global step 22300, epoch: 2, batch: 5971, loss: 0.344862, speed: 1.27 step/s
+global step 22400, epoch: 2, batch: 6071, loss: 0.233561, speed: 1.27 step/s
+global step 22500, epoch: 2, batch: 6171, loss: 0.477259, speed: 1.30 step/s
+global step 22600, epoch: 2, batch: 6271, loss: 0.109853, speed: 1.29 step/s
+global step 22700, epoch: 2, batch: 6371, loss: 1.101906, speed: 1.30 step/s
+global step 22800, epoch: 2, batch: 6471, loss: 0.380186, speed: 1.31 step/s
+global step 22900, epoch: 2, batch: 6571, loss: 0.371944, speed: 1.27 step/s
+global step 23000, epoch: 2, batch: 6671, loss: 0.415257, speed: 1.28 step/s
+global step 23100, epoch: 2, batch: 6771, loss: 0.317526, speed: 1.35 step/s
+global step 23200, epoch: 2, batch: 6871, loss: 0.316914, speed: 1.24 step/s
+global step 23300, epoch: 2, batch: 6971, loss: 0.325266, speed: 1.30 step/s
+global step 23400, epoch: 2, batch: 7071, loss: 0.364344, speed: 1.28 step/s
+global step 23500, epoch: 2, batch: 7171, loss: 0.343902, speed: 1.30 step/s
+global step 23600, epoch: 2, batch: 7271, loss: 0.275697, speed: 1.23 step/s
+global step 23700, epoch: 2, batch: 7371, loss: 0.562935, speed: 1.24 step/s
+global step 23800, epoch: 2, batch: 7471, loss: 0.683737, speed: 1.28 step/s
+global step 23900, epoch: 2, batch: 7571, loss: 0.866021, speed: 1.35 step/s
+global step 24000, epoch: 2, batch: 7671, loss: 0.595859, speed: 1.29 step/s
+global step 24100, epoch: 2, batch: 7771, loss: 0.167264, speed: 1.36 step/s
+global step 24200, epoch: 2, batch: 7871, loss: 1.093030, speed: 1.31 step/s
+global step 24300, epoch: 2, batch: 7971, loss: 0.517329, speed: 1.28 step/s
+global step 24400, epoch: 2, batch: 8071, loss: 0.321377, speed: 1.29 step/s
+global step 24500, epoch: 2, batch: 8171, loss: 0.615786, speed: 1.31 step/s
+global step 24600, epoch: 2, batch: 8271, loss: 0.761233, speed: 1.28 step/s
+global step 24700, epoch: 2, batch: 8371, loss: 0.374395, speed: 1.31 step/s
+global step 24800, epoch: 2, batch: 8471, loss: 0.166056, speed: 1.30 step/s
+global step 24900, epoch: 2, batch: 8571, loss: 0.395484, speed: 1.24 step/s
+global step 25000, epoch: 2, batch: 8671, loss: 0.158321, speed: 1.28 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_25000
+global step 25100, epoch: 2, batch: 8771, loss: 0.457838, speed: 1.20 step/s
+global step 25200, epoch: 2, batch: 8871, loss: 0.841738, speed: 1.32 step/s
+global step 25300, epoch: 2, batch: 8971, loss: 0.279398, speed: 1.20 step/s
+global step 25400, epoch: 2, batch: 9071, loss: 1.453707, speed: 1.30 step/s
+global step 25500, epoch: 2, batch: 9171, loss: 0.433172, speed: 1.27 step/s
+global step 25600, epoch: 2, batch: 9271, loss: 0.075460, speed: 1.23 step/s
+global step 25700, epoch: 2, batch: 9371, loss: 0.374525, speed: 1.31 step/s
+global step 25800, epoch: 2, batch: 9471, loss: 1.348296, speed: 1.25 step/s
+global step 25900, epoch: 2, batch: 9571, loss: 0.305779, speed: 1.26 step/s
+global step 26000, epoch: 2, batch: 9671, loss: 0.337773, speed: 1.29 step/s
+global step 26100, epoch: 2, batch: 9771, loss: 0.261594, speed: 1.26 step/s
+global step 26200, epoch: 2, batch: 9871, loss: 0.422337, speed: 1.26 step/s
+global step 26300, epoch: 2, batch: 9971, loss: 0.522221, speed: 1.36 step/s
+global step 26400, epoch: 2, batch: 10071, loss: 0.674496, speed: 1.25 step/s
+global step 26500, epoch: 2, batch: 10171, loss: 0.872996, speed: 1.30 step/s
+global step 26600, epoch: 2, batch: 10271, loss: 0.194375, speed: 1.28 step/s
+global step 26700, epoch: 2, batch: 10371, loss: 0.516633, speed: 1.31 step/s
+global step 26800, epoch: 2, batch: 10471, loss: 0.322393, speed: 1.25 step/s
+global step 26900, epoch: 2, batch: 10571, loss: 0.161179, speed: 1.32 step/s
+global step 27000, epoch: 2, batch: 10671, loss: 0.691302, speed: 1.33 step/s
+global step 27100, epoch: 2, batch: 10771, loss: 0.242495, speed: 1.25 step/s
+global step 27200, epoch: 2, batch: 10871, loss: 0.299147, speed: 1.30 step/s
+global step 27300, epoch: 2, batch: 10971, loss: 0.388653, speed: 1.28 step/s
+global step 27400, epoch: 2, batch: 11071, loss: 0.438481, speed: 1.29 step/s
+global step 27500, epoch: 2, batch: 11171, loss: 0.671265, speed: 1.25 step/s
+global step 27600, epoch: 2, batch: 11271, loss: 0.595678, speed: 1.31 step/s
+global step 27700, epoch: 2, batch: 11371, loss: 0.444558, speed: 1.23 step/s
+global step 27800, epoch: 2, batch: 11471, loss: 0.469137, speed: 1.29 step/s
+global step 27900, epoch: 2, batch: 11571, loss: 0.132676, speed: 1.29 step/s
+global step 28000, epoch: 2, batch: 11671, loss: 0.156938, speed: 1.31 step/s
+global step 28100, epoch: 2, batch: 11771, loss: 0.841443, speed: 1.27 step/s
+global step 28200, epoch: 2, batch: 11871, loss: 0.343341, speed: 1.33 step/s
+global step 28300, epoch: 2, batch: 11971, loss: 1.208700, speed: 1.27 step/s
+global step 28400, epoch: 2, batch: 12071, loss: 0.752582, speed: 1.30 step/s
+global step 28500, epoch: 2, batch: 12171, loss: 0.921518, speed: 1.23 step/s
+global step 28600, epoch: 2, batch: 12271, loss: 0.220937, speed: 1.23 step/s
+global step 28700, epoch: 2, batch: 12371, loss: 0.183117, speed: 1.30 step/s
+global step 28800, epoch: 2, batch: 12471, loss: 0.742309, speed: 1.28 step/s
+global step 28900, epoch: 2, batch: 12571, loss: 0.761121, speed: 1.31 step/s
+global step 29000, epoch: 2, batch: 12671, loss: 0.403831, speed: 1.21 step/s
+global step 29100, epoch: 2, batch: 12771, loss: 0.341768, speed: 1.31 step/s
+global step 29200, epoch: 2, batch: 12871, loss: 0.435638, speed: 1.26 step/s
+global step 29300, epoch: 2, batch: 12971, loss: 0.882717, speed: 1.20 step/s
+global step 29400, epoch: 2, batch: 13071, loss: 0.329570, speed: 1.30 step/s
+global step 29500, epoch: 2, batch: 13171, loss: 1.138540, speed: 1.28 step/s
+global step 29600, epoch: 2, batch: 13271, loss: 0.911030, speed: 1.23 step/s
+global step 29700, epoch: 2, batch: 13371, loss: 0.748591, speed: 1.34 step/s
+global step 29800, epoch: 2, batch: 13471, loss: 0.390993, speed: 1.35 step/s
+global step 29900, epoch: 2, batch: 13571, loss: 0.201641, speed: 1.37 step/s
+global step 30000, epoch: 2, batch: 13671, loss: 0.439081, speed: 1.29 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_30000
+global step 30100, epoch: 2, batch: 13771, loss: 0.609726, speed: 1.22 step/s
+global step 30200, epoch: 2, batch: 13871, loss: 0.321366, speed: 1.28 step/s
+global step 30300, epoch: 2, batch: 13971, loss: 1.380272, speed: 1.27 step/s
+global step 30400, epoch: 2, batch: 14071, loss: 0.876011, speed: 1.33 step/s
+global step 30500, epoch: 2, batch: 14171, loss: 0.375613, speed: 1.26 step/s
+global step 30600, epoch: 2, batch: 14271, loss: 0.258938, speed: 1.29 step/s
+global step 30700, epoch: 2, batch: 14371, loss: 0.531904, speed: 1.32 step/s
+global step 30800, epoch: 2, batch: 14471, loss: 0.360445, speed: 1.26 step/s
+global step 30900, epoch: 2, batch: 14571, loss: 0.423899, speed: 1.31 step/s
+global step 31000, epoch: 2, batch: 14671, loss: 0.246135, speed: 1.30 step/s
+global step 31100, epoch: 2, batch: 14771, loss: 0.596451, speed: 1.30 step/s
+global step 31200, epoch: 2, batch: 14871, loss: 0.454124, speed: 1.29 step/s
+global step 31300, epoch: 2, batch: 14971, loss: 0.058015, speed: 1.27 step/s
+global step 31400, epoch: 2, batch: 15071, loss: 0.279629, speed: 1.27 step/s
+global step 31500, epoch: 2, batch: 15171, loss: 0.212856, speed: 1.30 step/s
+global step 31600, epoch: 2, batch: 15271, loss: 0.599834, speed: 1.27 step/s
+global step 31700, epoch: 2, batch: 15371, loss: 0.214068, speed: 1.25 step/s
+global step 31800, epoch: 2, batch: 15471, loss: 0.333691, speed: 1.24 step/s
+global step 31900, epoch: 2, batch: 15571, loss: 0.318798, speed: 1.24 step/s
+global step 32000, epoch: 2, batch: 15671, loss: 0.195953, speed: 1.28 step/s
+global step 32100, epoch: 2, batch: 15771, loss: 0.387623, speed: 1.28 step/s
+global step 32200, epoch: 2, batch: 15871, loss: 0.868956, speed: 1.27 step/s
+global step 32300, epoch: 2, batch: 15971, loss: 0.228709, speed: 1.24 step/s
+global step 32400, epoch: 2, batch: 16071, loss: 0.247380, speed: 1.31 step/s
+global step 32500, epoch: 2, batch: 16171, loss: 1.025358, speed: 1.34 step/s
+global step 32600, epoch: 2, batch: 16271, loss: 0.231692, speed: 1.24 step/s
+Saving checkpoint to: /root/paddlejob/workspace/output/model_32658
+Processing example: 1000
+time per 1000: 21.118993759155273
+Processing example: 2000
+time per 1000: 23.535654067993164
+Processing example: 3000
+time per 1000: 23.866822481155396
+Processing example: 4000
+time per 1000: 39.44041633605957
+Processing example: 5000
+time per 1000: 29.442233085632324
+Processing example: 6000
+time per 1000: 25.440916538238525
+Processing example: 7000
+time per 1000: 24.621814250946045
+Processing example: 8000
+time per 1000: 26.19542646408081
+Processing example: 9000
+time per 1000: 26.73670196533203
+Processing example: 10000
+time per 1000: 23.0682110786438
+Processing example: 11000
+time per 1000: 24.996716737747192
+Processing example: 12000
+time per 1000: 24.99055504798889
+{
+  "exact": 85.85867093405206,
+  "f1": 88.70579950475263,
+  "total": 11873,
+  "HasAns_exact": 82.47300944669365,
+  "HasAns_f1": 88.17543143048748,
+  "HasAns_total": 5928,
+  "NoAns_exact": 89.23465096719933,
+  "NoAns_f1": 89.23465096719933,
+  "NoAns_total": 5945,
+  "best_exact": 85.99343047250063,
+  "best_exact_thresh": -1.6154582500457764,
+  "best_f1": 88.75296534320918,
+  "best_f1_thresh": -0.20494508743286133
+}
+/mnt
+[INFO]: train job success!
